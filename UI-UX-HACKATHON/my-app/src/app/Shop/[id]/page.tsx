@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { ProductDetail } from "../../Components/ProductDetail"
+import { ProductDetail } from "@/app/Components/ProductDetail"
 import DynamicProdDesSec from "@/app/Components/DynamicProductDecSec"
 import { RelatedProducts } from "@/app/Components/RelatedProducts"
 
@@ -10,13 +10,14 @@ async function getProduct(id: string) {
 }
 
 interface PageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export default async function ProductPage({ params }: PageProps) {
-  const product = await getProduct(params.id)
+  const resolvedParams = await params;
+  const product = await getProduct(resolvedParams.id)
   
   if (!product) {
     notFound()
