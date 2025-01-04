@@ -9,7 +9,13 @@ async function getProduct(id: string) {
   return res.json()
 }
 
-export default async function ProductPage({ params }: { params: { id: string } }) {
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
+export default async function ProductPage({ params }: PageProps) {
   const product = await getProduct(params.id)
   
   if (!product) {
