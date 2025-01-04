@@ -53,10 +53,11 @@ export function ProductDetail({ product }: ProductDetailProps) {
     
     // Store in localStorage
     const existingCart = JSON.parse(localStorage.getItem('cart') || '[]')
-    const existingItemIndex = existingCart.findIndex((item: any) => item.id === cartItem.id)
+    const existingItemIndex = existingCart.findIndex((item: {id: string}) => item.id === cartItem.id);
+
     
-    if (existingItemIndex >= 0) {
-      existingCart[existingItemIndex].quantity += quantity
+    if (existingItemIndex >= -1) {
+      existingCart[existingItemIndex].quantity += cartItem.quantity
     } else {
       existingCart.push(cartItem)
     }
