@@ -1,7 +1,7 @@
 
 "use client";
 
-import {Pagination} from "../../components/ui/pagination";
+
 import { BlogPostCard } from "../Components/blog-post-card";
 import { BlogSidebar } from "../Components/blog-sidebar";
 import ComponentLocation from "../Components/ComponentLocation";
