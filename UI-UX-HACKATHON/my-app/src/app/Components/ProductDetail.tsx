@@ -7,7 +7,7 @@ import { Star, Facebook, Linkedin, Twitter, Minus, Plus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Product } from "../Components/Types/product";
 import { CartDrawer } from "./Cart-Drawer";
-import { useRouter } from "next/navigation";
+
 
 interface ProductDetailProps {
   product: Product;
@@ -15,7 +15,7 @@ interface ProductDetailProps {
 
 export function ProductDetail({ product }: ProductDetailProps) {
 
-  const router = useRouter()
+  
 
 
   const [selectedImage, setSelectedImage] = useState(0);

@@ -1,9 +1,9 @@
 'use client'
 
-import { MapPin, Phone, Clock } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { MapPin, Phone, Clock } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact() {
   return (
@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="text-center mb-16">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch With Us</h1>
         <p className="text-gray-500 max-w-2xl mx-auto">
-          For More Information About Our Product & Services. Please Feel Free To Drop Us
+          For More Information About Our Product & Services. Please Feel Freee To Drop Us
           An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!
         </p>
       </div>
